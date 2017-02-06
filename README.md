@@ -3,6 +3,8 @@
 
 # elev-varsel-generate-document-title
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/elev-varsel-generate-document-title.svg)](https://greenkeeper.io/)
+
 Generates document title for elev varsel
 
 ## Usage
