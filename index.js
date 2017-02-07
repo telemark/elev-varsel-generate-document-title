@@ -22,10 +22,10 @@ module.exports = (item, untOff) => {
 
   if (item.documentCategory === 'fag') {
     const coursesList = item.coursesList.split('\n')
-    const courses = coursesList
-                      .map(course => course.split(' ')[0])
-                      .map(course => course.split(':')[1])
-    const coursesJoined = courses.join(' - ')
+    const coursesJoined = coursesList
+                            .map(course => course.split(' ')[0])
+                            .map(course => course.split(':')[1])
+                            .reduce((a, b) => `${a} - ${b}`)
 
     if (coursesJoined.length + 4 <= charsLeft) {
       result = result.replace('fag', `fag - ${coursesJoined}`)

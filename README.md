@@ -1,9 +1,8 @@
 [![Build Status](https://travis-ci.org/telemark/elev-varsel-generate-document-title.svg?branch=master)](https://travis-ci.org/telemark/elev-varsel-generate-document-title)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
+[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/elev-varsel-generate-document-title.svg)](https://greenkeeper.io/)
 
 # elev-varsel-generate-document-title
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/telemark/elev-varsel-generate-document-title.svg)](https://greenkeeper.io/)
 
 Generates document title for elev varsel
 
