@@ -13,7 +13,6 @@ module.exports = (item, untOff) => {
     title.push(item.studentName)
   }
   title.push(item.studentMainGroupName)
-  title.push(item.schoolName)
   title.push(fixPeriod(item.period))
   title.push(getSkoleAar())
 

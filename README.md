@@ -18,11 +18,11 @@ const generateTitle = require('./index')
 
 console.log(generateTitle(data, true))
 
-//=> Varsel - fag - 3GKJ/876ABC2003 - Tomato Sauce - LARVS:3GKJ - Larvs videregående skole - Standpunktkarakter - 2016/2017
+//=> Varsel - fag - 3GKJ/876ABC2003 - Tomato Sauce - LARVS:3GKJ - Standpunktkarakter - 2016/2017
 
 console.log(generateTitle(data, false))
 
-//=> Varsel - fag - 3GKJ/876ABC2003 - LARVS:3GKJ - Larvs videregående skole - Standpunktkarakter - 2016/2017
+//=> Varsel - fag - 3GKJ/876ABC2003 - LARVS:3GKJ - Standpunktkarakter - 2016/2017
 
 ```
 
