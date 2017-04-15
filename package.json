@@ -1,7 +1,7 @@
 {
   "name": "elev-varsel-generate-document-title",
   "description": "Generates document title for elev varsel",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "coveralls": "2.12.0",
     "nsp": "2.6.3",
-    "standard": "10.3.2",
-    "tap": "10.2.0"
+    "standard": "9.0.2",
+    "tap": "10.3.2"
   },
   "dependencies": {
     "capitalize": "1.0.0",
