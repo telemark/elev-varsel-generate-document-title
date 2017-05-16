@@ -3,19 +3,36 @@
 const capitalize = require('capitalize')
 const getSkoleAar = require('get-skole-aar')
 const fixPeriod = require('./lib/fix-period')
+const datePadding = require('./lib/date-padding')
+
+function resolveCategory (item) {
+  let resolved = item.documentCategory
+
+  if (item.documentCategory === 'samtale') {
+    resolved = item.documentTemplate === 'ikke-samtale' ? 'ikke ønsket' : 'gjennomført'
+  }
+
+  return resolved
+}
 
 module.exports = (item, untOff) => {
+  const now = new Date()
+  const date = datePadding(now.getDate()) + '.' + datePadding(now.getMonth() + 1) + '.' + now.getFullYear()
   let title = []
 
-  title.push(capitalize(item.documentType))
-  title.push(item.documentCategory)
+  title.push(capitalize(item.documentType === 'samtale' ? 'Elevsamtale' : item.documentType))
+  title.push(resolveCategory(item))
   if (untOff) {
     title.push(item.studentName)
   }
+  if (item.documentType === 'samtale') {
+    title.push(item.documentDate || date)
+  }
   title.push(item.studentMainGroupName)
-  title.push(fixPeriod(item.period))
-  title.push(getSkoleAar())
-
+  if (item.documentType !== 'samtale') {
+    title.push(fixPeriod(item.period))
+    title.push(getSkoleAar())
+  }
   let result = title.join(' - ')
   const charsLeft = 128 - result.length
 

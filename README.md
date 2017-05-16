@@ -30,4 +30,4 @@ console.log(generateTitle(data, false))
 
 [MIT](LICENSE)
 
-![alt text](https://robots.kebabstudios.party/elev-varsel-generate-document-title.png "Robohash image of elev-varsel-generate-document-title")
+![Robohash image of elev-varsel-generate-document-title](https://robots.kebabstudios.party/elev-varsel-generate-document-title.png "Robohash image of elev-varsel-generate-document-title")
