@@ -1,7 +1,7 @@
 {
   "name": "elev-varsel-generate-document-title",
   "description": "Generates document title for varsel and elevsamtale",
-  "version": "2.0.8",
+  "version": "2.1.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.10.0"
+    "node": ">=8.4.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -20,10 +20,9 @@
     "standard-fix": "standard --fix"
   },
   "keywords": [
-    "microservice",
-    "micro",
-    "roles",
-    "portalen",
+    "minelev",
+    "louie",
+    "saksbehandling",
     "Telemark fylkeskommune"
   ],
   "repository": {

@@ -15,9 +15,13 @@ function resolveCategory (item) {
   return resolved
 }
 
+function formatDate (date) {
+  return `${datePadding(date.getDate())}.${datePadding(date.getMonth() + 1)}.${date.getFullYear()}`
+}
+
 module.exports = (item, untOff) => {
-  const now = new Date()
-  const date = datePadding(now.getDate()) + '.' + datePadding(now.getMonth() + 1) + '.' + now.getFullYear()
+  const now = item.documentDate ? new Date(item.documentDate) : new Date()
+  const date = formatDate(now)
   let title = []
 
   title.push(capitalize(item.documentType === 'samtale' ? 'Elevsamtale' : item.documentType))
@@ -26,7 +30,7 @@ module.exports = (item, untOff) => {
     title.push(item.studentName)
   }
   if (item.documentType === 'samtale') {
-    title.push(item.documentDate || date)
+    title.push(date)
   }
   title.push(item.studentMainGroupName)
   if (item.documentType !== 'samtale') {
