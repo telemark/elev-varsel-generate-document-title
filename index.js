@@ -24,19 +24,41 @@ module.exports = (item, untOff) => {
   const date = formatDate(now)
   let title = []
 
-  title.push(capitalize(item.documentType === 'samtale' ? 'Elevsamtale' : item.documentType))
-  title.push(resolveCategory(item))
-  if (untOff) {
-    title.push(item.studentName)
+  if (/yff/.test(item.documentCategory) === true) {
+    title.push('YFF')
+    if (item.documentCategory === 'yff-bekreftelse') {
+      title.push('Bekreftelse om avtale yrkesfaglig fordypning')
+    } else if (item.documentCategory === 'yff-lokalplan') {
+      title.push('Elevens lokale læreplan i yrkesfaglig fordypning')
+    } else if (item.documentCategory === 'yff-tilbakemelding') {
+      title.push('Tilbakemeldingsskjema - arbeidspraksis')
+    }
+    if (untOff) {
+      title.push(item.studentName)
+      title.push(item.schoolName)
+      title.push(getSkoleAar())
+      if (item.documentCategory !== 'yff-lokalplan') {
+        title.push(item.bedriftsNavn)
+      }
+    }
+  } else {
+    title.push(capitalize(item.documentType === 'samtale' ? 'Elevsamtale' : item.documentType))
+
+    title.push(resolveCategory(item))
+
+    if (untOff) {
+      title.push(item.studentName)
+    }
+    if (item.documentType === 'samtale') {
+      title.push(date)
+    }
+    title.push(item.studentMainGroupName)
+    if (item.documentType !== 'samtale') {
+      title.push(fixPeriod(item.period))
+      title.push(getSkoleAar())
+    }
   }
-  if (item.documentType === 'samtale') {
-    title.push(date)
-  }
-  title.push(item.studentMainGroupName)
-  if (item.documentType !== 'samtale') {
-    title.push(fixPeriod(item.period))
-    title.push(getSkoleAar())
-  }
+
   let result = title.join(' - ')
   const charsLeft = 128 - result.length
 
