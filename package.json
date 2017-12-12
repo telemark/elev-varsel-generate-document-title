@@ -10,7 +10,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.4.0"
+    "node": ">=8.9.3"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -27,11 +27,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/telemark/elev-varsel-generate-document-title.git"
+    "url": "git+https://github.com/telemark/elev-varsel-generate-document-title.git"
   },
   "bugs": {
     "url": "https://github.com/telemark/elev-varsel-generate-document-title/issues"
   },
+  "homepage": "https://github.com/telemark/elev-varsel-generate-document-title#readme",
   "devDependencies": {
     "coveralls": "3.0.0",
     "nsp": "3.1.0",
