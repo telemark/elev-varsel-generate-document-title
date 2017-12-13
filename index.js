@@ -36,9 +36,11 @@ module.exports = (item, untOff) => {
     title.push('YFF')
     if (untOff) {
       title.push(item.studentName)
-      title.push(item.schoolName)
+      if (item.documentCategory !== 'yff-bekreftelse-bedrift') {
+        title.push(item.schoolName)
+      }
       title.push(getSkoleAar())
-      if (item.documentCategory !== 'yff-lokalplan') {
+      if (['yff-bekreftelse', 'yff-tilbakemelding'].includes(item.documentCategory)) {
         title.push(item.bedriftsNavn)
       }
     }
