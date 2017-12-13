@@ -1,5 +1,3 @@
-'use strict'
-
 const capitalize = require('capitalize')
 const getSkoleAar = require('get-skole-aar')
 const fixPeriod = require('./lib/fix-period')
@@ -25,14 +23,17 @@ module.exports = (item, untOff) => {
   let title = []
 
   if (/yff/.test(item.documentCategory) === true) {
-    title.push('YFF')
     if (item.documentCategory === 'yff-bekreftelse') {
-      title.push('Bekreftelse om avtale yrkesfaglig fordypning')
+      title.push('Bekreftelse til elev')
+    } else if (item.documentCategory === 'yff-bekreftelse-bedrift') {
+      title.push('Bekreftelse til bedrift')
     } else if (item.documentCategory === 'yff-lokalplan') {
-      title.push('Elevens lokale læreplan i yrkesfaglig fordypning')
+      title.push('Elevens lokale læreplan')
     } else if (item.documentCategory === 'yff-tilbakemelding') {
       title.push('Tilbakemeldingsskjema - arbeidspraksis')
     }
+    title.push('yrkesfaglig fordypning')
+    title.push('YFF')
     if (untOff) {
       title.push(item.studentName)
       title.push(item.schoolName)
