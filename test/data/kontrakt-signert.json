@@ -1,0 +1,20 @@
+{
+  "_id": "e75cf9b8-a87a-43a8-98e4-28609d8587eb",
+  "studentName": "Thomas Topstad",
+  "studentFirstName": "Thomas",
+  "studentMiddleName": "",
+  "studentLastName": "Topstad",
+  "studentId": "01010750160",
+  "studentUserName": "0107top",
+  "studentMail": "thomas.topstad@hotmail.com",
+  "studentPhone": "+4798888888",
+  "documentDate": "2018-04-16T10:53:01.403Z",
+  "documentType": "laerekontrakt",
+  "documentCategory": "kontrakt-signert",
+  "documentStatus": [
+    {
+      "timeStamp": 1523875981403,
+      "status": "I kø"
+    }
+  ]
+}

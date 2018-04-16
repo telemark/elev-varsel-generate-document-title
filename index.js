@@ -44,6 +44,10 @@ module.exports = (item, untOff) => {
         title.push(item.bedriftsNavn)
       }
     }
+  } else if (item.documentCategory === 'kontrakt-signert') {
+    title.push('Informasjonsbrev')
+    title.push('godkjent lærekontrakt')
+    title.push(date)
   } else {
     title.push(capitalize(item.documentType === 'samtale' ? 'Elevsamtale' : item.documentType))
 
@@ -68,9 +72,9 @@ module.exports = (item, untOff) => {
   if (item.documentCategory === 'fag') {
     const coursesList = item.coursesList.split('\n')
     const coursesJoined = coursesList
-                            .map(course => course.split(' ')[0])
-                            .map(course => course.split(':')[1])
-                            .reduce((a, b) => `${a} - ${b}`)
+      .map(course => course.split(' ')[0])
+      .map(course => course.split(':')[1])
+      .reduce((a, b) => `${a} - ${b}`)
 
     if (coursesJoined.length + 4 <= charsLeft) {
       result = result.replace('fag', `fag - ${coursesJoined}`)
