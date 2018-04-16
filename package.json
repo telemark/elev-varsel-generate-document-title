@@ -1,7 +1,7 @@
 {
   "name": "elev-varsel-generate-document-title",
   "description": "Generates document title for varsel and elevsamtale",
-  "version": "2.2.2",
+  "version": "2.3.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
