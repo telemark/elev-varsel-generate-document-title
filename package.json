@@ -41,7 +41,7 @@
     "tap": "12.0.1"
   },
   "dependencies": {
-    "capitalize": "1.0.0",
+    "capitalize": "2.0.0",
     "get-skole-aar": "1.0.0"
   }
 }
