@@ -37,7 +37,7 @@
   "devDependencies": {
     "coveralls": "3.0.7",
     "standard": "12.0.1",
-    "tap": "14.8.3"
+    "tap": "14.9.1"
   },
   "dependencies": {
     "capitalize": "2.0.0",
