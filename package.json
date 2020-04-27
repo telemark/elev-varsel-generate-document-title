@@ -40,7 +40,7 @@
     "tap": "14.10.6"
   },
   "dependencies": {
-    "capitalize": "2.0.0",
+    "capitalize": "2.0.3",
     "get-skole-aar": "2.0.0"
   }
 }
