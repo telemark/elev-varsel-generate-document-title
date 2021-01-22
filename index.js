@@ -61,7 +61,7 @@ module.exports = (item, untOff) => {
     }
     title.push(item.studentMainGroupName)
     if (item.documentType !== 'samtale') {
-      title.push(fixPeriod(item.period))
+      if (item.period) title.push(fixPeriod(item.period))
       title.push(getSkoleAar())
     }
   }
