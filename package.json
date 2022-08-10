@@ -41,6 +41,6 @@
   },
   "dependencies": {
     "capitalize": "2.0.4",
-    "get-skole-aar": "2.0.0"
+    "get-skole-aar": "2.1.0"
   }
 }
